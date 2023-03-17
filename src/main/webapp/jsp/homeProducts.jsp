@@ -60,7 +60,7 @@
                                 <td><%= product.getName() %></td>
                                 <td><%= product.getPrice() %></td>
 <%--                                <td><a type="button" class="btn btn-sm btn-outline-success btnUpdate" href="./updateProduct?id=<%= product.getId()%>">Edit</a></td>--%>
-                                <td><button class="btn btn-sm btn-outline-success" id="btnUpdate">Edit</button></td>
+                                <td><button class="btn btn-sm btn-outline-success btnUpdate">Edit</button></td>
                                 <td><button class="btn btn-sm btn-outline-danger btnDelete">Delete</button></td>
                             </tr>
                         <%}%>
@@ -199,7 +199,7 @@
                 $('#priceUpdateProduct').val('')
             })
 
-            $('#btnUpdate').click(function (event) {
+            $('.btnUpdate').click(function (event) {
                 // event.preventDefault()
                 row = this.parentElement.parentElement.children
                 id = row[0].innerText
