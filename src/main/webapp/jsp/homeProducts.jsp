@@ -177,11 +177,12 @@
 
             $('.btnDelete').click(function (event) {
                 // event.preventDefault()
+                $('#bodyModalDelete').text("")
                 row = this.parentElement.parentElement.children
                 id = row[0].innerText
                 name = row[1].innerText
 
-                let messBodyDelate = $('#bodyModalDelete').text() + name + " with ID:" + id
+                let messBodyDelate = "Are you sure you want to delete the product " + name + " with ID:" + id
                 $('#bodyModalDelete').text(messBodyDelate)
                 $('#modalDelete').modal('show')
             })
